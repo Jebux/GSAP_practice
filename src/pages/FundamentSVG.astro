@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AnimatedLogoButton from "../components/AnimatedLogoButton.jsx";
+---
+
+<BaseLayout>
+    <h1>Fundamentos Visuales de SVG</h1>
+    <dl>
+        <dt>SVG</dt>
+        <dd>
+            Scalable Vector Graphics, un formato de imagen basado en vectores
+            que utiliza XML para definir gráficos bidimensionales.
+        </dd>
+        <dt>Anatomía básica</dt>
+        <dd>
+            <ul>
+                <li>
+                    svg: El contenedor que contiene tamaño lógico, sistema de
+                    coordenadas y relación de aspecto.
+                </li>
+                <li>
+                    Formas básicas: rect, circle, ellipse, line, polygon,
+                    polyline.
+                </li>
+                <li>path: Secuencia de instrucciones matemáticas.</li>
+            </ul>
+        </dd>
+        <dt>Sistema de coordenadas</dt>
+        <dd>
+            SVG usa un plano cartesiano donde el origen (0,0) está en la esquina
+            superior izquierda.
+        </dd>
+        <dt>Fill y Stroke</dt>
+        <dd>
+            Fill: Color o patrón que llena el interior de una forma. Stroke:
+            Color, ancho y estilo del borde de una forma.
+        </dd>
+        <dt>stroke-dash</dt>
+        <dd>
+            stroke-dasharray: Define el patrón de guiones y espacios para el
+            trazo.
+            <br />
+            stroke-dashoffset: Desplaza el inicio del patrón de guiones a lo largo
+            del trazo.
+        </dd>
+        <dt>Transformaciones en SVG</dt>
+        <dd>Transformaciones comunes como translate, rotate, scale y skew.</dd>
+        <dt>Grupos (&lt;g&gt;)</dt>
+        <dd>
+            Permiten agrupar múltiples elementos SVG para aplicarles
+            transformaciones o estilos comunes.
+        </dd>
+        <dt>ViewBox</dt>
+        <dd>
+            Atributo que define el área visible del SVG y cómo se escala dentro
+            de su contenedor.
+        </dd>
+    </dl>
+
+    <AnimatedLogoButton client:visible/>
+
+    https://www.joshwcomeau.com/svg/friendly-introduction-to-svg/
+</BaseLayout>
