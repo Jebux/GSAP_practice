@@ -1,0 +1,17 @@
+.icon #hand{
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: spin 60s linear infinite;
+}
+
+.icon #lines{
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 1.2s ease-in infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse{
+  0%,100%{ transform: translateY(0) }
+  50%{ transform: translateY(-3%) }
+}
